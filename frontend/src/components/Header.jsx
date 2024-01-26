@@ -7,7 +7,8 @@ export default function Header({ cartItems }) {
       <div className='col-12 col-md-3'>
         <div className='navbar-brand'>
           <Link to='/'>
-            <img width='150px' src='/images/logo.png' />
+            {/* <img width='150px' src='/images/logo.png' /> */}
+            <h1 style={{ color: 'white', fontWeight: 'bold' }}>RKcart</h1>
           </Link>
         </div>
       </div>
@@ -17,12 +18,14 @@ export default function Header({ cartItems }) {
       </div>
 
       <div className='col-12 col-md-3 mt-4 mt-md-0 text-center'>
-        <span id='cart' className='ml-3'>
-          Cart
-        </span>
-        <span className='ml-1' id='cart_count'>
-          {cartItems.length}
-        </span>
+        <Link to='/cart'>
+          <span id='cart' className='ml-3'>
+            Cart
+          </span>
+          <span className='ml-1' id='cart_count'>
+            {cartItems.length}
+          </span>
+        </Link>
       </div>
     </nav>
   );
